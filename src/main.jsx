@@ -7,6 +7,8 @@ import {
 import './index.css'
 import UserLogin from './Components/AuthorizationCompo/UserLogin.jsx';
 import UserSignup from './Components/AuthorizationCompo/UserSignup.jsx';
+import TruckEntry from './Components/TruckEntry.jsx/TruckEntry.jsx';
+import DeliveryClient from './Components/DeliveryClient/DeliveryClient.jsx';
 
 
 const router = createBrowserRouter([
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: <UserSignup></UserSignup>,
+  },
+  {
+    path: "/truckentry",
+    element: <TruckEntry />,
+  },
+  {
+    path: "/client",
+    element: <DeliveryClient />,
   }
 ]);
 

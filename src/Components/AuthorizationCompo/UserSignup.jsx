@@ -1,3 +1,4 @@
+import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 
 const UserSignup = () => {
     const handleLogin = e => {
@@ -14,6 +15,10 @@ const UserSignup = () => {
             password: password,
         }
         console.log(user);
+    }
+
+    const handleGoogle = () => {
+        console.log('handle google clicked');
     }
     return (
         <div className="hero min-h-screen bg-base-200">
@@ -58,6 +63,11 @@ const UserSignup = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
+                    <div className="flex mx-auto gap-6 py-2">
+                        <button onClick={handleGoogle} className="text-xl"><FaGoogle /></button>
+                        <button className="text-xl"><FaFacebook /></button>
+                        <button className="text-xl"><FaGithub /></button>
+                    </div>
                 </div>
             </div>
         </div>
