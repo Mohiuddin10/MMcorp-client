@@ -9,6 +9,7 @@ import UserLogin from './Components/AuthorizationCompo/UserLogin.jsx';
 import UserSignup from './Components/AuthorizationCompo/UserSignup.jsx';
 import TruckEntry from './Components/TruckEntry.jsx/TruckEntry.jsx';
 import DeliveryClient from './Components/DeliveryClient/DeliveryClient.jsx';
+import FinalTruckChalan from './Components/FinalTruckChalan/FinalTruckChalan.jsx';
 
 
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/client",
     element: <DeliveryClient />,
+  },
+  {
+    path: "/final-chalan",
+    element: <FinalTruckChalan />
   }
 ]);
 
