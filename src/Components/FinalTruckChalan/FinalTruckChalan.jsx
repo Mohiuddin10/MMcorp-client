@@ -1,3 +1,5 @@
+import Party from "./Party/Party";
+import TruckDetails from "./TruckDetails/TruckDetails";
 
 const FinalTruckChalan = () => {
     return (
@@ -9,23 +11,16 @@ const FinalTruckChalan = () => {
                 <h1 className="text-xl text-green-900">Phone: 01711-264423</h1>
             </div>
 
-            <div className="ms-5">
-                <h4>Delivery To:</h4>
-                <h4>Address:</h4>
-                <h4>Phone:</h4>
-            </div>
+            {/* Delivery party  */}
+            <Party></Party>
+            {/* Truck details  */}
+            <TruckDetails />
 
-            <div className="">
-                <h4>Truck No:</h4>
-                <h4>Driver Name:</h4>
-                <h4>Driver Phone:</h4>
-            </div>
-
-            <div className="">
-                <h4>Product Description:</h4>
-                <h4>Truck Fare: </h4>
-                <h4>Advance:</h4>
-                <h4>Net Pay:</h4>
+            <div className="mx-5 mt-5 p-6 border-2 border-green-500 rounded-lg grid grid-cols-3 justify-center">
+                <h4 className="border-2 col-span-2 px-4 pt-4">Product Description:</h4>
+                <h4 className="border-2">Truck Fare: </h4>
+                {/* <h4 className="border-2">Advance:</h4>
+                <h4 className="border-2">Net Pay:</h4> */}
             </div>
         </div>
     );
