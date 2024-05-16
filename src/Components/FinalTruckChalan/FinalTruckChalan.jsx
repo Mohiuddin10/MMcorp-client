@@ -17,7 +17,7 @@ const FinalTruckChalan = () => {
             <TruckDetails />
 
             <div className="mx-5 mt-5 p-6 border-2 border-green-500 rounded-lg grid grid-cols-3 justify-center">
-                <h4 className="border-2 col-span-2 px-4 pt-4">Product Description:</h4>
+                <h4 className="border-2 col-span-2 px-4 pt-4 mx-auto">Product Description:</h4>
                 <h4 className="border-2">Truck Fare: </h4>
                 {/* <h4 className="border-2">Advance:</h4>
                 <h4 className="border-2">Net Pay:</h4> */}
