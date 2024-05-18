@@ -1,4 +1,6 @@
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 const UserSignup = () => {
     const handleLogin = e => {
@@ -63,7 +65,10 @@ const UserSignup = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
-                    <div className="flex mx-auto gap-6 py-2">
+                    <div className="text-center mb-2">
+                        <h2>Already signup, then <button className="btn-ghost text-green-700"><Link to="/">click here</Link></button></h2>
+                    </div>
+                    <div className="flex mx-auto gap-6 py-2 mb-4">
                         <button onClick={handleGoogle} className="text-xl"><FaGoogle /></button>
                         <button className="text-xl"><FaFacebook /></button>
                         <button className="text-xl"><FaGithub /></button>

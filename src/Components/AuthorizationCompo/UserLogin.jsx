@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const UserLogin = () => {
     const handleLogin = e => {
@@ -40,8 +41,11 @@ const UserLogin = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
+                   <div className="text-center mx-4 my-6">
+                        <h2>Don't have account please <button className="btn-ghost text-green-700"><Link to="/signup">signup</Link></button></h2>
+                   </div>
                 </div>
-            </div>
+            </div>            
         </div>
     );
 };
