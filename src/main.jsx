@@ -11,34 +11,41 @@ import TruckEntry from './Components/TruckEntry.jsx/TruckEntry.jsx';
 import DeliveryClient from './Components/DeliveryClient/DeliveryClient.jsx';
 import FinalTruckChalan from './Components/FinalTruckChalan/FinalTruckChalan.jsx';
 import Nav from './Components/Nav/Nav.jsx';
+import Root from './Components/root/Root.jsx';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <UserLogin />,
+    element: <Root />,
+    children: [
+     {
+      path: "/",
+      element: <UserLogin></UserLogin>
+     },
+     {
+      path: "/signup",
+      element: <UserSignup></UserSignup>,
+    },
+    {
+      path: "/truckentry",
+      element: <TruckEntry />,
+    },
+    {
+      path: "/client",
+      element: <DeliveryClient />,
+    },
+    {
+      path: "/final-chalan",
+      element: <FinalTruckChalan />
+    }
+    ]
   },
-  {
-    path: "/signup",
-    element: <UserSignup></UserSignup>,
-  },
-  {
-    path: "/truckentry",
-    element: <TruckEntry />,
-  },
-  {
-    path: "/client",
-    element: <DeliveryClient />,
-  },
-  {
-    path: "/final-chalan",
-    element: <FinalTruckChalan />
-  }
+  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Nav></Nav>
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
