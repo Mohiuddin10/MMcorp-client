@@ -1,3 +1,4 @@
+import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -17,6 +18,17 @@ const UserSignup = () => {
             password: password,
         }
         console.log(user);
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            console.log(user);
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            console.log(errorCode, errorMessage);
+        })
     }
 
     const handleGoogle = () => {
