@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const UserLogin = () => {
+
+    // test
+    const name = useContext(AuthContext);
+    console.log(name);
+    // test 
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
@@ -41,11 +48,14 @@ const UserLogin = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
-                   <div className="text-center mx-4 my-6">
+                    <div className="text-center mx-4 my-6">
                         <h2>Don't have account please <button className="btn-ghost text-green-700"><Link to="/signup">signup</Link></button></h2>
-                   </div>
+                        {/* test  */}
+                        <p>Name: {name.name}</p>
+                        {/* test  */}
+                    </div>
                 </div>
-            </div>            
+            </div>
         </div>
     );
 };
