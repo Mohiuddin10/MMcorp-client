@@ -1,17 +1,13 @@
 import { createContext } from "react";
-import { PropTypes } from "prop-types"
+import PropsType from "prop-types";
 
 
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
-
     const authName = {
-        name: "Mohammad Mohiuddin",
-        age: 31,
-        salary: "$13000"
-    };
-
+        name: "Mohammad Mehtab Uddin Araf"
+    }
     return (
         <AuthContext.Provider value={authName}>
             {children}
@@ -22,5 +18,5 @@ const AuthProvider = ({ children }) => {
 export default AuthProvider;
 
 AuthProvider.propTypes = {
-    children: PropTypes.node,
+    children: PropsType.node,
 }

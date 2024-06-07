@@ -5,7 +5,7 @@ import { AuthContext } from "../../Context/AuthProvider";
 const UserLogin = () => {
 
     // test
-    const name = useContext(AuthContext);
+    const { name }= useContext(AuthContext);
     console.log(name);
     // test 
     const handleLogin = e => {
@@ -49,7 +49,7 @@ const UserLogin = () => {
                         </div>
                     </form>
                     <div className="text-center mx-4 my-6">
-                        <h2>Don't have account please <button className="btn-ghost text-green-700"><Link to="/signup">signup</Link></button></h2>
+                        <h2>Do not have account please <button className="btn-ghost text-green-700"><Link to="/signup">signup</Link></button></h2>
                         {/* test  */}
                         <p>Name: {name.name}</p>
                         {/* test  */}
