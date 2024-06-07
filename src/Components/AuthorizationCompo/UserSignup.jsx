@@ -1,9 +1,15 @@
 import { createUserWithEmailAndPassword, getAuth } from "firebase/auth";
+import { useContext } from "react";
 import { FaFacebook, FaGithub, FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider2";
 
 
 const UserSignup = () => {
+
+    // const authInfo = useContext(AuthContext);
+    // console.log(authInfo);
+
     const handleLogin = e => {
         e.preventDefault();
         const form = e.target;
